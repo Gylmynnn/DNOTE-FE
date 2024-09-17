@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import "../index.css";
 
 import CSidebar from "@/components/sidebar";
+import CuteImg from "@/assets/cute";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -16,13 +17,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <CSidebar />
 
       <motion.div
-        className="flex-1 overflow-auto scrollbar-hide"
+        className="flex-1 overflow-auto scrollbar-hide m-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         {children}
       </motion.div>
+      <CuteImg />
     </motion.div>
   );
 };

@@ -18,7 +18,15 @@ export default function CSidebar() {
 
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
   return (
-    <div className="flex flex-col p-5 items-center h-full gap-4">
+    <div className="flex flex-col px-5 py-8 items-center justify-between h-auto gap-4 bg-orange-400 m-6 rounded-sm">
+      <div className="">
+        <Button
+          asChild
+          className="hover:rounded-2xl duration-200 ease-in-out transition-all"
+        >
+          <Link to="/create">+</Link>
+        </Button>
+      </div>
       <div className="" onClick={toggleDarkMode}>
         <motion.div
           initial={false}
@@ -27,14 +35,6 @@ export default function CSidebar() {
         >
           {isDarkMode ? <MoonSvg /> : <SunSvg />}
         </motion.div>
-      </div>
-      <div className="">
-        <Button
-          asChild
-          className="hover:rounded-2xl duration-200 ease-in-out transition-all"
-        >
-          <Link to="/create">+</Link>
-        </Button>
       </div>
     </div>
   );

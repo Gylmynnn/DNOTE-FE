@@ -13,7 +13,7 @@ export default function Create() {
     navigate("/");
   };
   return (
-    <main className="pt-24">
+    <main className="pt-8">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col justify-center mx-4"
@@ -34,7 +34,7 @@ export default function Create() {
         <Textarea
           name="note"
           id="note"
-          className="my-2 min-h-40"
+          className="my-2 min-h-80 border-2"
           placeholder="write your note"
           required
         />
